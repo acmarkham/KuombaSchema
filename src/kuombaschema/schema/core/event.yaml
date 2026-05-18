@@ -1,0 +1,64 @@
+id: https://acmarkham.github.io/KuombaSchema/core/event
+
+name: event_schema
+
+title: Minimal KuombaSchema Event Model
+
+description: >
+  Minimal standalone LinkML event schema for KuombaSchema.
+
+license: https://creativecommons.org/publicdomain/zero/1.0/
+
+prefixes:
+  ks: https://acmarkham.github.io/KuombaSchema/
+  linkml: https://w3id.org/linkml/
+
+default_prefix: ks
+default_range: string
+
+imports:
+  - linkml:types
+
+classes:
+
+  Event:
+    description: >
+      A minimal ecological sensing event.
+
+    slots:
+      - event_id
+      - event_type
+      - start_time
+      - end_time
+      - latitude
+      - longitude
+
+slots:
+
+  event_id:
+    identifier: true
+    required: true
+    range: string
+    description: Unique event identifier.
+
+  event_type:
+    required: true
+    range: string
+    description: Event classification.
+
+  start_time:
+    required: true
+    range: datetime
+    description: Event start timestamp.
+
+  end_time:
+    range: datetime
+    description: Event end timestamp.
+
+  latitude:
+    range: float
+    description: Latitude in decimal degrees.
+
+  longitude:
+    range: float
+    description: Longitude in decimal degrees.
