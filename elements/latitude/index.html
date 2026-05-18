@@ -8,7 +8,7 @@
       
       
       
-        <link rel="canonical" href="https://acmarkham.github.io/KuombaSchema/elements/people/">
+        <link rel="canonical" href="https://acmarkham.github.io/KuombaSchema/elements/latitude/">
       
       
       
@@ -21,7 +21,7 @@
     
     
       
-        <title>Slot: people - KuombaSchema</title>
+        <title>Slot: latitude - KuombaSchema</title>
       
     
     
@@ -74,7 +74,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#slot-people" class="md-skip">
+        <a href="#slot-latitude" class="md-skip">
           Skip to content
         </a>
       
@@ -116,7 +116,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Slot: people
+              Slot: latitude
             
           </span>
         </div>
@@ -377,12 +377,13 @@
   
 
 
-<h1 id="slot-people">Slot: people</h1>
+<h1 id="slot-latitude">Slot: latitude</h1>
+<p><em>Latitude in decimal degrees.</em></p>
 <div data-search-exclude markdown="1">
 
 
 
-URI: [kuombaschema:people](https://w3id.org/acmarkham/KuombaSchema/people)
+URI: [kuombaschema:latitude](https://w3id.org/acmarkham/KuombaSchema/latitude)
 <!-- no inheritance hierarchy -->
 
 
@@ -393,7 +394,7 @@ URI: [kuombaschema:people](https://w3id.org/acmarkham/KuombaSchema/people)
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [PersonCollection](PersonCollection.md) | A holder for Person objects |  no  |
+| [Event](Event.md) | A minimal ecological sensing event |  no  |
 
 
 
@@ -406,21 +407,13 @@ URI: [kuombaschema:people](https://w3id.org/acmarkham/KuombaSchema/people)
 
 | Property | Value |
 | --- | --- |
-| Range | [Person](Person.md) |
-| Domain Of | [PersonCollection](PersonCollection.md) |
+| Range | [Float](Float.md) |
+| Domain Of | [Event](Event.md) |
 
 ### Cardinality and Requirements
 
 | Property | Value |
 | --- | --- |
-| Multivalued | Yes |
-### Slot Characteristics
-
-| Property | Value |
-| --- | --- |
-| Owner | [PersonCollection](PersonCollection.md) |
-
-
 
 
 
@@ -449,8 +442,8 @@ URI: [kuombaschema:people](https://w3id.org/acmarkham/KuombaSchema/people)
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | kuombaschema:people |
-| native | kuombaschema:people |
+| self | kuombaschema:latitude |
+| native | kuombaschema:latitude |
 
 
 
@@ -458,16 +451,13 @@ URI: [kuombaschema:people](https://w3id.org/acmarkham/KuombaSchema/people)
 ## LinkML Source
 
 <details>
-<div class="highlight"><pre><span></span><code><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">people</span>
+<div class="highlight"><pre><span></span><code><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">latitude</span>
+<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Latitude in decimal degrees.</span>
 <span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/acmarkham/KuombaSchema</span>
 <span class="nt">rank</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1000</span>
-<span class="nt">owner</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">PersonCollection</span>
 <span class="nt">domain_of</span><span class="p">:</span>
-<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">PersonCollection</span>
-<span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Person</span>
-<span class="nt">multivalued</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
-<span class="nt">inlined</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
-<span class="nt">inlined_as_list</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Event</span>
+<span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">float</span>
 </code></pre></div>
 </details></div>
 

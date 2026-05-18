@@ -8,7 +8,7 @@
       
       
       
-        <link rel="canonical" href="https://acmarkham.github.io/KuombaSchema/elements/age_in_years/">
+        <link rel="canonical" href="https://acmarkham.github.io/KuombaSchema/elements/start_time/">
       
       
       
@@ -21,7 +21,7 @@
     
     
       
-        <title>Slot: age_in_years - KuombaSchema</title>
+        <title>Slot: start_time - KuombaSchema</title>
       
     
     
@@ -74,7 +74,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#slot-age_in_years" class="md-skip">
+        <a href="#slot-start_time" class="md-skip">
           Skip to content
         </a>
       
@@ -116,7 +116,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Slot: age_in_years
+              Slot: start_time
             
           </span>
         </div>
@@ -377,13 +377,13 @@
   
 
 
-<h1 id="slot-age_in_years">Slot: age_in_years</h1>
-<p><em>Number of years since birth</em></p>
+<h1 id="slot-start_time">Slot: start_time</h1>
+<p><em>Event start timestamp.</em></p>
 <div data-search-exclude markdown="1">
 
 
 
-URI: [kuombaschema:age_in_years](https://w3id.org/acmarkham/KuombaSchema/age_in_years)
+URI: [kuombaschema:start_time](https://w3id.org/acmarkham/KuombaSchema/start_time)
 <!-- no inheritance hierarchy -->
 
 
@@ -394,7 +394,7 @@ URI: [kuombaschema:age_in_years](https://w3id.org/acmarkham/KuombaSchema/age_in_
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Person](Person.md) | Represents a Person |  no  |
+| [Event](Event.md) | A minimal ecological sensing event |  no  |
 
 
 
@@ -407,13 +407,14 @@ URI: [kuombaschema:age_in_years](https://w3id.org/acmarkham/KuombaSchema/age_in_
 
 | Property | Value |
 | --- | --- |
-| Range | [Integer](Integer.md) |
-| Domain Of | [Person](Person.md) |
+| Range | [Datetime](Datetime.md) |
+| Domain Of | [Event](Event.md) |
 
 ### Cardinality and Requirements
 
 | Property | Value |
 | --- | --- |
+| Required | Yes |
 
 
 
@@ -442,8 +443,8 @@ URI: [kuombaschema:age_in_years](https://w3id.org/acmarkham/KuombaSchema/age_in_
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | kuombaschema:age_in_years |
-| native | kuombaschema:age_in_years |
+| self | kuombaschema:start_time |
+| native | kuombaschema:start_time |
 
 
 
@@ -451,13 +452,14 @@ URI: [kuombaschema:age_in_years](https://w3id.org/acmarkham/KuombaSchema/age_in_
 ## LinkML Source
 
 <details>
-<div class="highlight"><pre><span></span><code><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">age_in_years</span>
-<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Number of years since birth</span>
+<div class="highlight"><pre><span></span><code><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">start_time</span>
+<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Event start timestamp.</span>
 <span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/acmarkham/KuombaSchema</span>
 <span class="nt">rank</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1000</span>
 <span class="nt">domain_of</span><span class="p">:</span>
-<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Person</span>
-<span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">integer</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Event</span>
+<span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">datetime</span>
+<span class="nt">required</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 </code></pre></div>
 </details></div>
 

@@ -8,7 +8,7 @@
       
       
       
-        <link rel="canonical" href="https://acmarkham.github.io/KuombaSchema/elements/PersonStatus/">
+        <link rel="canonical" href="https://acmarkham.github.io/KuombaSchema/elements/event_type/">
       
       
       
@@ -21,7 +21,7 @@
     
     
       
-        <title>Enum: PersonStatus - KuombaSchema</title>
+        <title>Slot: event_type - KuombaSchema</title>
       
     
     
@@ -74,7 +74,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#enum-personstatus" class="md-skip">
+        <a href="#slot-event_type" class="md-skip">
           Skip to content
         </a>
       
@@ -116,7 +116,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Enum: PersonStatus
+              Slot: event_type
             
           </span>
         </div>
@@ -377,26 +377,44 @@
   
 
 
-<h1 id="enum-personstatus">Enum: PersonStatus</h1>
+<h1 id="slot-event_type">Slot: event_type</h1>
+<p><em>Event classification.</em></p>
 <div data-search-exclude markdown="1">
 
-URI: [kuombaschema:PersonStatus](https://w3id.org/acmarkham/KuombaSchema/PersonStatus)
 
-## Permissible Values
-| Value | Meaning | Description |
+
+URI: [kuombaschema:event_type](https://w3id.org/acmarkham/KuombaSchema/event_type)
+<!-- no inheritance hierarchy -->
+
+
+
+
+
+## Applicable Classes
+
+| Name | Description | Modifies Slot |
 | --- | --- | --- |
-| ALIVE | PATO:0001421 | the person is living |
-| DEAD | PATO:0001422 | the person is deceased |
-| UNKNOWN | None | the vital status is not known |
+| [Event](Event.md) | A minimal ecological sensing event |  no  |
 
 
 
 
-## Slots
 
-| Name | Description |
-| ---  | --- |
-| [vital_status](vital_status.md) | living or dead status |
+
+## Properties
+
+### Type and Range
+
+| Property | Value |
+| --- | --- |
+| Range | [String](String.md) |
+| Domain Of | [Event](Event.md) |
+
+### Cardinality and Requirements
+
+| Property | Value |
+| --- | --- |
+| Required | Yes |
 
 
 
@@ -421,32 +439,29 @@ URI: [kuombaschema:PersonStatus](https://w3id.org/acmarkham/KuombaSchema/PersonS
 
 
 
+## Mappings
+
+| Mapping Type | Mapped Value |
+| ---  | ---  |
+| self | kuombaschema:event_type |
+| native | kuombaschema:event_type |
+
+
 
 
 ## LinkML Source
 
 <details>
-<div class="highlight"><pre><span></span><code><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">PersonStatus</span>
+<div class="highlight"><pre><span></span><code><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">event_type</span>
+<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Event classification.</span>
 <span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/acmarkham/KuombaSchema</span>
 <span class="nt">rank</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1000</span>
-<span class="nt">permissible_values</span><span class="p">:</span>
-<span class="w">  </span><span class="nt">ALIVE</span><span class="p">:</span>
-<span class="w">    </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ALIVE</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">the person is living</span>
-<span class="w">    </span><span class="nt">meaning</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">PATO:0001421</span>
-<span class="w">  </span><span class="nt">DEAD</span><span class="p">:</span>
-<span class="w">    </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">DEAD</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">the person is deceased</span>
-<span class="w">    </span><span class="nt">meaning</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">PATO:0001422</span>
-<span class="w">  </span><span class="nt">UNKNOWN</span><span class="p">:</span>
-<span class="w">    </span><span class="nt">text</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">UNKNOWN</span>
-<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">the vital status is not known</span>
-<span class="w">    </span><span class="nt">todos</span><span class="p">:</span>
-<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">map this to an ontology</span>
+<span class="nt">domain_of</span><span class="p">:</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Event</span>
+<span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span>
+<span class="nt">required</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 </code></pre></div>
-</details>
-
-</div>
+</details></div>
 
 
 

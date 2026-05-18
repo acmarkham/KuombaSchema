@@ -8,7 +8,7 @@
       
       
       
-        <link rel="canonical" href="https://acmarkham.github.io/KuombaSchema/elements/birth_date/">
+        <link rel="canonical" href="https://acmarkham.github.io/KuombaSchema/elements/event_id/">
       
       
       
@@ -21,7 +21,7 @@
     
     
       
-        <title>Slot: birth_date - KuombaSchema</title>
+        <title>Slot: event_id - KuombaSchema</title>
       
     
     
@@ -74,7 +74,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#slot-birth_date" class="md-skip">
+        <a href="#slot-event_id" class="md-skip">
           Skip to content
         </a>
       
@@ -116,7 +116,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Slot: birth_date
+              Slot: event_id
             
           </span>
         </div>
@@ -377,13 +377,13 @@
   
 
 
-<h1 id="slot-birth_date">Slot: birth_date</h1>
-<p><em>Date on which a person is born</em></p>
+<h1 id="slot-event_id">Slot: event_id</h1>
+<p><em>Unique event identifier.</em></p>
 <div data-search-exclude markdown="1">
 
 
 
-URI: [schema:birthDate](http://schema.org/birthDate)
+URI: [kuombaschema:event_id](https://w3id.org/acmarkham/KuombaSchema/event_id)
 <!-- no inheritance hierarchy -->
 
 
@@ -394,7 +394,7 @@ URI: [schema:birthDate](http://schema.org/birthDate)
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [Person](Person.md) | Represents a Person |  no  |
+| [Event](Event.md) | A minimal ecological sensing event |  no  |
 
 
 
@@ -407,14 +407,21 @@ URI: [schema:birthDate](http://schema.org/birthDate)
 
 | Property | Value |
 | --- | --- |
-| Range | [Date](Date.md) |
-| Domain Of | [Person](Person.md) |
-| Slot URI | [schema:birthDate](http://schema.org/birthDate) |
+| Range | [String](String.md) |
+| Domain Of | [Event](Event.md) |
 
 ### Cardinality and Requirements
 
 | Property | Value |
 | --- | --- |
+| Required | Yes |
+### Slot Characteristics
+
+| Property | Value |
+| --- | --- |
+| Identifier | Yes |
+
+
 
 
 
@@ -443,8 +450,8 @@ URI: [schema:birthDate](http://schema.org/birthDate)
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | schema:birthDate |
-| native | kuombaschema:birth_date |
+| self | kuombaschema:event_id |
+| native | kuombaschema:event_id |
 
 
 
@@ -452,14 +459,15 @@ URI: [schema:birthDate](http://schema.org/birthDate)
 ## LinkML Source
 
 <details>
-<div class="highlight"><pre><span></span><code><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">birth_date</span>
-<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Date on which a person is born</span>
+<div class="highlight"><pre><span></span><code><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">event_id</span>
+<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Unique event identifier.</span>
 <span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/acmarkham/KuombaSchema</span>
 <span class="nt">rank</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1000</span>
-<span class="nt">slot_uri</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">schema:birthDate</span>
+<span class="nt">identifier</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="nt">domain_of</span><span class="p">:</span>
-<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Person</span>
-<span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">date</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Event</span>
+<span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span>
+<span class="nt">required</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 </code></pre></div>
 </details></div>
 

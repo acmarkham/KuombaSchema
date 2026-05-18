@@ -41,6 +41,10 @@
          <lastmod>2026-05-18</lastmod>
     </url>
     <url>
+         <loc>https://acmarkham.github.io/KuombaSchema/elements/Event/</loc>
+         <lastmod>2026-05-18</lastmod>
+    </url>
+    <url>
          <loc>https://acmarkham.github.io/KuombaSchema/elements/Float/</loc>
          <lastmod>2026-05-18</lastmod>
     </url>
@@ -61,10 +65,6 @@
          <lastmod>2026-05-18</lastmod>
     </url>
     <url>
-         <loc>https://acmarkham.github.io/KuombaSchema/elements/NamedThing/</loc>
-         <lastmod>2026-05-18</lastmod>
-    </url>
-    <url>
          <loc>https://acmarkham.github.io/KuombaSchema/elements/Ncname/</loc>
          <lastmod>2026-05-18</lastmod>
     </url>
@@ -74,18 +74,6 @@
     </url>
     <url>
          <loc>https://acmarkham.github.io/KuombaSchema/elements/Objectidentifier/</loc>
-         <lastmod>2026-05-18</lastmod>
-    </url>
-    <url>
-         <loc>https://acmarkham.github.io/KuombaSchema/elements/Person/</loc>
-         <lastmod>2026-05-18</lastmod>
-    </url>
-    <url>
-         <loc>https://acmarkham.github.io/KuombaSchema/elements/PersonCollection/</loc>
-         <lastmod>2026-05-18</lastmod>
-    </url>
-    <url>
-         <loc>https://acmarkham.github.io/KuombaSchema/elements/PersonStatus/</loc>
          <lastmod>2026-05-18</lastmod>
     </url>
     <url>
@@ -109,35 +97,27 @@
          <lastmod>2026-05-18</lastmod>
     </url>
     <url>
-         <loc>https://acmarkham.github.io/KuombaSchema/elements/age_in_years/</loc>
+         <loc>https://acmarkham.github.io/KuombaSchema/elements/end_time/</loc>
          <lastmod>2026-05-18</lastmod>
     </url>
     <url>
-         <loc>https://acmarkham.github.io/KuombaSchema/elements/birth_date/</loc>
+         <loc>https://acmarkham.github.io/KuombaSchema/elements/event_id/</loc>
          <lastmod>2026-05-18</lastmod>
     </url>
     <url>
-         <loc>https://acmarkham.github.io/KuombaSchema/elements/description/</loc>
+         <loc>https://acmarkham.github.io/KuombaSchema/elements/event_type/</loc>
          <lastmod>2026-05-18</lastmod>
     </url>
     <url>
-         <loc>https://acmarkham.github.io/KuombaSchema/elements/id/</loc>
+         <loc>https://acmarkham.github.io/KuombaSchema/elements/latitude/</loc>
          <lastmod>2026-05-18</lastmod>
     </url>
     <url>
-         <loc>https://acmarkham.github.io/KuombaSchema/elements/name/</loc>
+         <loc>https://acmarkham.github.io/KuombaSchema/elements/longitude/</loc>
          <lastmod>2026-05-18</lastmod>
     </url>
     <url>
-         <loc>https://acmarkham.github.io/KuombaSchema/elements/people/</loc>
-         <lastmod>2026-05-18</lastmod>
-    </url>
-    <url>
-         <loc>https://acmarkham.github.io/KuombaSchema/elements/primary_email/</loc>
-         <lastmod>2026-05-18</lastmod>
-    </url>
-    <url>
-         <loc>https://acmarkham.github.io/KuombaSchema/elements/vital_status/</loc>
+         <loc>https://acmarkham.github.io/KuombaSchema/elements/start_time/</loc>
          <lastmod>2026-05-18</lastmod>
     </url>
 </urlset>

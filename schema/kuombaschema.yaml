@@ -6,11 +6,15 @@ see_also:
 id: https://w3id.org/acmarkham/KuombaSchema
 imports:
 - linkml:types
+- core/event
 license: MIT
 prefixes:
   kuombaschema:
     prefix_prefix: kuombaschema
     prefix_reference: https://w3id.org/acmarkham/KuombaSchema/
+  ks:
+    prefix_prefix: ks
+    prefix_reference: https://acmarkham.github.io/KuombaSchema/
   linkml:
     prefix_prefix: linkml
     prefix_reference: https://w3id.org/linkml/
@@ -297,192 +301,92 @@ types:
     base: str
     uri: xsd:string
     repr: str
-enums:
-  PersonStatus:
-    name: PersonStatus
-    definition_uri: https://w3id.org/acmarkham/KuombaSchema/PersonStatus
-    from_schema: https://w3id.org/acmarkham/KuombaSchema
-    permissible_values:
-      ALIVE:
-        text: ALIVE
-        description: the person is living
-        meaning: PATO:0001421
-      DEAD:
-        text: DEAD
-        description: the person is deceased
-        meaning: PATO:0001422
-      UNKNOWN:
-        text: UNKNOWN
-        description: the vital status is not known
-        todos:
-        - map this to an ontology
 slots:
-  id:
-    name: id
-    definition_uri: https://w3id.org/acmarkham/KuombaSchema/id
-    description: A unique identifier for a thing
-    from_schema: https://w3id.org/acmarkham/KuombaSchema
-    mappings:
-    - schema:identifier
-    slot_uri: schema:identifier
+  event_id:
+    name: event_id
+    definition_uri: https://acmarkham.github.io/KuombaSchema/event_id
+    description: Unique event identifier.
+    from_schema: https://acmarkham.github.io/KuombaSchema/core/event
+    slot_uri: ks:event_id
     identifier: true
-    owner: NamedThing
+    owner: Event
     domain_of:
-    - NamedThing
-    range: uriorcurie
+    - Event
+    range: string
     required: true
-  name:
-    name: name
-    definition_uri: https://w3id.org/acmarkham/KuombaSchema/name
-    description: A human-readable name for a thing
-    from_schema: https://w3id.org/acmarkham/KuombaSchema
-    mappings:
-    - schema:name
-    slot_uri: schema:name
-    owner: NamedThing
+  event_type:
+    name: event_type
+    definition_uri: https://acmarkham.github.io/KuombaSchema/event_type
+    description: Event classification.
+    from_schema: https://acmarkham.github.io/KuombaSchema/core/event
+    slot_uri: ks:event_type
+    owner: Event
     domain_of:
-    - NamedThing
+    - Event
     range: string
-  description:
-    name: description
-    definition_uri: https://w3id.org/acmarkham/KuombaSchema/description
-    description: A human-readable description for a thing
-    from_schema: https://w3id.org/acmarkham/KuombaSchema
-    mappings:
-    - schema:description
-    slot_uri: schema:description
-    owner: NamedThing
+    required: true
+  start_time:
+    name: start_time
+    definition_uri: https://acmarkham.github.io/KuombaSchema/start_time
+    description: Event start timestamp.
+    from_schema: https://acmarkham.github.io/KuombaSchema/core/event
+    slot_uri: ks:start_time
+    owner: Event
     domain_of:
-    - NamedThing
-    range: string
-  primary_email:
-    name: primary_email
-    definition_uri: https://w3id.org/acmarkham/KuombaSchema/primary_email
-    description: The main email address of a person
-    from_schema: https://w3id.org/acmarkham/KuombaSchema
-    mappings:
-    - schema:email
-    slot_uri: schema:email
-    owner: Person
+    - Event
+    range: datetime
+    required: true
+  end_time:
+    name: end_time
+    definition_uri: https://acmarkham.github.io/KuombaSchema/end_time
+    description: Event end timestamp.
+    from_schema: https://acmarkham.github.io/KuombaSchema/core/event
+    slot_uri: ks:end_time
+    owner: Event
     domain_of:
-    - Person
-    range: string
-  birth_date:
-    name: birth_date
-    definition_uri: https://w3id.org/acmarkham/KuombaSchema/birth_date
-    description: Date on which a person is born
-    from_schema: https://w3id.org/acmarkham/KuombaSchema
-    mappings:
-    - schema:birthDate
-    slot_uri: schema:birthDate
-    owner: Person
+    - Event
+    range: datetime
+  latitude:
+    name: latitude
+    definition_uri: https://acmarkham.github.io/KuombaSchema/latitude
+    description: Latitude in decimal degrees.
+    from_schema: https://acmarkham.github.io/KuombaSchema/core/event
+    slot_uri: ks:latitude
+    owner: Event
     domain_of:
-    - Person
-    range: date
-  age_in_years:
-    name: age_in_years
-    definition_uri: https://w3id.org/acmarkham/KuombaSchema/age_in_years
-    description: Number of years since birth
-    from_schema: https://w3id.org/acmarkham/KuombaSchema
-    slot_uri: kuombaschema:age_in_years
-    owner: Person
+    - Event
+    range: float
+  longitude:
+    name: longitude
+    definition_uri: https://acmarkham.github.io/KuombaSchema/longitude
+    description: Longitude in decimal degrees.
+    from_schema: https://acmarkham.github.io/KuombaSchema/core/event
+    slot_uri: ks:longitude
+    owner: Event
     domain_of:
-    - Person
-    range: integer
-  vital_status:
-    name: vital_status
-    definition_uri: https://w3id.org/acmarkham/KuombaSchema/vital_status
-    description: living or dead status
-    from_schema: https://w3id.org/acmarkham/KuombaSchema
-    slot_uri: kuombaschema:vital_status
-    owner: Person
-    domain_of:
-    - Person
-    range: PersonStatus
-  personCollection__people:
-    name: personCollection__people
-    from_schema: https://w3id.org/acmarkham/KuombaSchema
-    slot_uri: kuombaschema:people
-    alias: people
-    owner: PersonCollection
-    domain_of:
-    - PersonCollection
-    range: Person
-    multivalued: true
-    inlined: true
-    inlined_as_list: true
-  Person_primary_email:
-    name: Person_primary_email
-    definition_uri: https://w3id.org/acmarkham/KuombaSchema/primary_email
-    description: The main email address of a person
-    from_schema: https://w3id.org/acmarkham/KuombaSchema
-    mappings:
-    - schema:email
-    is_a: primary_email
-    domain: Person
-    slot_uri: schema:email
-    alias: primary_email
-    owner: Person
-    domain_of:
-    - Person
-    is_usage_slot: true
-    usage_slot_name: primary_email
-    range: string
-    pattern: ^\S+@[\S+\.]+\S+
+    - Event
+    range: float
 classes:
-  NamedThing:
-    name: NamedThing
-    definition_uri: https://w3id.org/acmarkham/KuombaSchema/NamedThing
-    description: A generic grouping for any identifiable entity
-    from_schema: https://w3id.org/acmarkham/KuombaSchema
+  Event:
+    name: Event
+    definition_uri: https://acmarkham.github.io/KuombaSchema/Event
+    description: 'A minimal ecological sensing event.
+
+      '
+    from_schema: https://acmarkham.github.io/KuombaSchema/core/event
     exact_mappings:
-    - schema:Thing
+    - ks:Event
     slots:
-    - id
-    - name
-    - description
-    class_uri: schema:Thing
-  Person:
-    name: Person
-    definition_uri: https://w3id.org/acmarkham/KuombaSchema/Person
-    description: Represents a Person
-    from_schema: https://w3id.org/acmarkham/KuombaSchema
-    exact_mappings:
-    - kuombaschema:Person
-    is_a: NamedThing
-    slots:
-    - id
-    - name
-    - description
-    - Person_primary_email
-    - birth_date
-    - age_in_years
-    - vital_status
-    slot_usage:
-      primary_email:
-        name: primary_email
-        pattern: ^\S+@[\S+\.]+\S+
-    class_uri: kuombaschema:Person
-  PersonCollection:
-    name: PersonCollection
-    definition_uri: https://w3id.org/acmarkham/KuombaSchema/PersonCollection
-    description: A holder for Person objects
-    from_schema: https://w3id.org/acmarkham/KuombaSchema
-    exact_mappings:
-    - kuombaschema:PersonCollection
-    slots:
-    - personCollection__people
-    attributes:
-      people:
-        name: people
-        range: Person
-        multivalued: true
-        inlined_as_list: true
-    class_uri: kuombaschema:PersonCollection
-    tree_root: true
+    - event_id
+    - event_type
+    - start_time
+    - end_time
+    - latitude
+    - longitude
+    class_uri: ks:Event
 metamodel_version: 1.11.0
 source_file: kuombaschema.yaml
-source_file_date: '2026-05-18T12:51:55'
-source_file_size: 2197
-generation_date: '2026-05-18T12:52:05'
+source_file_date: '2026-05-18T14:17:16'
+source_file_size: 594
+generation_date: '2026-05-18T14:17:26'
 

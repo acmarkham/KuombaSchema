@@ -8,7 +8,7 @@
       
       
       
-        <link rel="canonical" href="https://acmarkham.github.io/KuombaSchema/elements/description/">
+        <link rel="canonical" href="https://acmarkham.github.io/KuombaSchema/elements/end_time/">
       
       
       
@@ -21,7 +21,7 @@
     
     
       
-        <title>Slot: description - KuombaSchema</title>
+        <title>Slot: end_time - KuombaSchema</title>
       
     
     
@@ -74,7 +74,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#slot-description" class="md-skip">
+        <a href="#slot-end_time" class="md-skip">
           Skip to content
         </a>
       
@@ -116,7 +116,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Slot: description
+              Slot: end_time
             
           </span>
         </div>
@@ -377,13 +377,13 @@
   
 
 
-<h1 id="slot-description">Slot: description</h1>
-<p><em>A human-readable description for a thing</em></p>
+<h1 id="slot-end_time">Slot: end_time</h1>
+<p><em>Event end timestamp.</em></p>
 <div data-search-exclude markdown="1">
 
 
 
-URI: [schema:description](http://schema.org/description)
+URI: [kuombaschema:end_time](https://w3id.org/acmarkham/KuombaSchema/end_time)
 <!-- no inheritance hierarchy -->
 
 
@@ -394,8 +394,7 @@ URI: [schema:description](http://schema.org/description)
 
 | Name | Description | Modifies Slot |
 | --- | --- | --- |
-| [NamedThing](NamedThing.md) | A generic grouping for any identifiable entity |  no  |
-| [Person](Person.md) | Represents a Person |  no  |
+| [Event](Event.md) | A minimal ecological sensing event |  no  |
 
 
 
@@ -408,9 +407,8 @@ URI: [schema:description](http://schema.org/description)
 
 | Property | Value |
 | --- | --- |
-| Range | [String](String.md) |
-| Domain Of | [NamedThing](NamedThing.md) |
-| Slot URI | [schema:description](http://schema.org/description) |
+| Range | [Datetime](Datetime.md) |
+| Domain Of | [Event](Event.md) |
 
 ### Cardinality and Requirements
 
@@ -444,8 +442,8 @@ URI: [schema:description](http://schema.org/description)
 
 | Mapping Type | Mapped Value |
 | ---  | ---  |
-| self | schema:description |
-| native | kuombaschema:description |
+| self | kuombaschema:end_time |
+| native | kuombaschema:end_time |
 
 
 
@@ -453,14 +451,13 @@ URI: [schema:description](http://schema.org/description)
 ## LinkML Source
 
 <details>
-<div class="highlight"><pre><span></span><code><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">description</span>
-<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">A human-readable description for a thing</span>
+<div class="highlight"><pre><span></span><code><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">end_time</span>
+<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Event end timestamp.</span>
 <span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/acmarkham/KuombaSchema</span>
 <span class="nt">rank</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1000</span>
-<span class="nt">slot_uri</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">schema:description</span>
 <span class="nt">domain_of</span><span class="p">:</span>
-<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">NamedThing</span>
-<span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Event</span>
+<span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">datetime</span>
 </code></pre></div>
 </details></div>
 
